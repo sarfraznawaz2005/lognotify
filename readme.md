@@ -40,7 +40,13 @@ It should publish `config/lognotify.php` config file.
 
 ## Usage
 
-Start socket server by issuing following command:
+Add this in your app layout file/footer:
+
+```php
+@include('logNotify::view')
+```
+
+And then start socket server by issuing following command:
 
 ```bash
 $ php artisan lognotify:serve
