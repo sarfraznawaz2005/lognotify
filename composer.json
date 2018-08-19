@@ -1,0 +1,37 @@
+{
+  "name": "sarfraznawaz2005/lognotify",
+  "description": "Laravel package to show notifications in realtime whenever there is new log entry made anywhere in application.",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Sarfraz Ahmed",
+      "email": "sarfraznawaz2005@gmail.com",
+      "homepage": "http://codeinphp.github.io"
+    }
+  ],
+  "homepage": "https://github.com/sarfraznawaz2005/lognotify",
+  "keywords": [
+    "Laravel",
+    "log",
+    "realtime",
+    "Notification"
+  ],
+  "require": {
+    "illuminate/support": "~5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sarfraznawaz2005\\LogNotify\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Sarfraznawaz2005\\LogNotify\\LogNotifyServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable",
+  "version": "1.0.0"
+}
