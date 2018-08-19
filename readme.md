@@ -43,7 +43,7 @@ It should publish `config/lognotify.php` config file.
 Start socket server by issuing following command:
 
 ```bash
-$ php artisan socket_serve
+$ php artisan lognotify:serve
 ```
 
 Now whenever new entry is made in laravel log file, you will see popup notification at bottom right of your application.

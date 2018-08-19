@@ -6,6 +6,7 @@ use Illuminate\Log\Events\MessageLogged;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use Sarfraznawaz2005\LogNotify\Console\SocketServerCommand;
 
 class LogNotifyServiceProvider extends ServiceProvider
 {
@@ -41,6 +42,10 @@ class LogNotifyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/Config/config.php', 'logNotify');
+
+        $this->app->bind('command.lognotify', SocketServerCommand::class);
+
+        $this->commands('command.lognotify');
 
         // register event handler
         Event::listen(MessageLogged::class, function (MessageLogged $e) {

@@ -18,7 +18,8 @@
     "Notification"
   ],
   "require": {
-    "illuminate/support": "~5"
+    "illuminate/support": "~5",
+    "vakata/websocket": "^1.0"
   },
   "autoload": {
     "psr-4": {
