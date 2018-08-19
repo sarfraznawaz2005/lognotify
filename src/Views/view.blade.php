@@ -1,3 +1,4 @@
+@if (config('logNotify.enabled')) {
 <script>
     var socket = new WebSocket("{{config('logNotify.socket_url')}}");
 
@@ -93,3 +94,4 @@
         padding: 5px;
     }
 </style>
+@endif
